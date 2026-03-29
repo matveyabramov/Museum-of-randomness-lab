@@ -138,17 +138,6 @@
 }
 
 @media (max-width: 767px) {
-    /* section {
-        margin-top: 70px;
-    }
-
-    section.dispersion,
-    section.microshift,
-    section.cryst,
-    footer {
-        margin-top: 50px;
-    } */
-
     .container {
         padding: 0 15px 0 15px;
     }
@@ -196,8 +185,6 @@
     }
 
     .hero__crystal-fallback {
-        /* max-width: 200px;
-        min-width: unset; */
         min-width: 200px;
     }
 

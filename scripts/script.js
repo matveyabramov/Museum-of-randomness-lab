@@ -330,14 +330,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const roundedX = Math.round(shard.currentX * 100) / 100;
       const roundedY = Math.round(shard.currentY * 100) / 100;
 
-      // Обновляем DOM только если значение реально изменилось
       if (roundedX !== shard.renderedX || roundedY !== shard.renderedY) {
         shard.el.style.transform = `translate3d(${roundedX}px, ${roundedY}px, 0)`;
         shard.renderedX = roundedX;
         shard.renderedY = roundedY;
       }
 
-      // Проверяем, осталось ли заметное движение
       if (
         Math.abs(shard.targetX - shard.currentX) > 0.05 ||
         Math.abs(shard.targetY - shard.currentY) > 0.05
@@ -350,7 +348,6 @@ document.addEventListener('DOMContentLoaded', () => {
       Math.abs(pointer.targetX - pointer.x) > 0.05 ||
       Math.abs(pointer.targetY - pointer.y) > 0.05;
 
-    // Если всё успокоилось и курсор не активен — останавливаем RAF
     if (!pointer.active && !isStillMoving && !pointerMoving) {
       stopAnimation();
     }
@@ -359,7 +356,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function init() {
     buildShardState();
 
-    // Начальное нулевое состояние
     shards.forEach((shard) => {
       shard.el.style.transform = 'translate3d(0px, 0px, 0)';
       shard.renderedX = 0;
@@ -470,7 +466,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const roundedX = Math.round(currentX * 100) / 100;
     const roundedY = Math.round(currentY * 100) / 100;
 
-    // Обновляем DOM только если значение реально изменилось
     if (roundedX !== renderedX || roundedY !== renderedY) {
       crystal.style.transform = `translate(${roundedX}px, ${roundedY}px)`;
       renderedX = roundedX;
@@ -486,7 +481,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // начальное состояние
   crystal.style.transform = 'translate(0px, 0px)';
   renderedX = 0;
   renderedY = 0;
