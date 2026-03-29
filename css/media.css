@@ -195,10 +195,14 @@
         display: block;
     }
 
-    .hero__crystal {
+    .hero__crystal-fallback {
         /* max-width: 200px;
         min-width: unset; */
         min-width: 200px;
+    }
+
+    .hero__model {
+        width: 300px;
     }
 
     .hero__wrapper {

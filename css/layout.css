@@ -84,8 +84,22 @@ section:first-child {
     text-align: center;
 }
 
-.hero__crystal {
-    min-width: 380px;
+.hero__model {
+    position: relative;
+    width: 380px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+}
+
+.hero__model-viewer {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    --progress-bar-color: transparent;
+}
+
+.hero__crystal-fallback {
+    width: 380px;
 }
 
 .label-mobile {
@@ -194,9 +208,12 @@ section:first-child {
     border: solid 3px #D8D8D8;
     background-color: #191919;
     border-radius: 100000px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
-.microshift__timeline-point.active {
+.microshift__timeline-point.active,
+.microshift__timeline-point:hover {
     background-color: #D8D8D8;
 }
 

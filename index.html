@@ -22,7 +22,12 @@
                 </div>
                 <div class="hero__subwrapper">
                     <div class="label label-desktop">[ Session: NEW ]</div>
-                    <img src="./images/Onboarding-Crystal.png" alt="crystal" class="hero__crystal">
+                    <div class="hero__model" id="hero-model">
+                        <!-- <img src="./images/Onboarding-Crystal.png" alt="crystal" class="hero__crystal-fallback"> -->
+                        <model-viewer class="hero__model-viewer" src="./models/crystal.glb" alt="3D crystal" camera-controls disable-zoom
+                            interaction-prompt="none" touch-action="pan-y" camera-orbit="35deg 80deg 105%">
+                        </model-viewer>
+                    </div>
                     <div class="label label-desktop">[ SYSTEM: IDLE ]</div>
                 </div>
                 <div class="hero__bottom-wrapper bottom-wrapper">
@@ -55,20 +60,20 @@
                     </div>
                 </div>
                 <div class="microshift__slider">
-                    <img src="./images/slider/Slider1.png" alt="crystal" class="microshift__slider-img active">
-                    <img src="./images/slider/Slider2.png" alt="crystal" class="microshift__slider-img">
-                    <img src="./images/slider/Slider3.png" alt="crystal" class="microshift__slider-img">
-                    <img src="./images/slider/Slider4.png" alt="crystal" class="microshift__slider-img">
-                    <img src="./images/slider/Slider5.png" alt="crystal" class="microshift__slider-img">
+                    <img src="./images/slider/Slider1.png" alt="crystal" class="microshift__slider-img active" data-index="0">
+                    <img src="./images/slider/Slider2.png" alt="crystal" class="microshift__slider-img" data-index="1">
+                    <img src="./images/slider/Slider3.png" alt="crystal" class="microshift__slider-img" data-index="2">
+                    <img src="./images/slider/Slider4.png" alt="crystal" class="microshift__slider-img" data-index="3">
+                    <img src="./images/slider/Slider5.png" alt="crystal" class="microshift__slider-img" data-index="4">
                 </div>
                 <div class="bottom-wrapper">
                     <div class="microshift__timeline">
                         <div class="microshift__timeline-line"></div>
-                        <div class="microshift__timeline-point active"></div>
-                        <div class="microshift__timeline-point"></div>
-                        <div class="microshift__timeline-point"></div>
-                        <div class="microshift__timeline-point"></div>
-                        <div class="microshift__timeline-point"></div>
+                        <button class="microshift__timeline-point active" data-index="0"></button>
+                        <button class="microshift__timeline-point" data-index="1"></button>
+                        <button class="microshift__timeline-point" data-index="2"></button>
+                        <button class="microshift__timeline-point" data-index="3"></button>
+                        <button class="microshift__timeline-point" data-index="4"></button>
                     </div>
                     <div class="label-wrapper">
                         <div class="label">[ STABILITY: 78% ]</div>
@@ -169,5 +174,7 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
