@@ -3,7 +3,10 @@
         margin-top: 100px;
     }
 
-    section.dispersion {
+    section.dispersion,
+    section.microshift,
+    section.cryst,
+    footer {
         margin-top: 80px;
     }
     
@@ -115,19 +118,39 @@
         bottom: 320px;
         left: 100px;
     }
+
+    .cryst__subwrapper {
+        flex-direction: column;
+    }
+
+    .cryst__title {
+        grid-row: 2;
+    }
+
+    .cryst__text {
+        grid-row: 1;
+        max-width: 354px;
+    }
+
+    .cryst__label-wrapper {
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 767px) {
-    section {
+    /* section {
         margin-top: 70px;
     }
 
-    section.dispersion {
+    section.dispersion,
+    section.microshift,
+    section.cryst,
+    footer {
         margin-top: 50px;
-    }
+    } */
 
     .container {
-        padding: 15px;
+        padding: 0 15px 0 15px;
     }
 
     .hero__heading {
@@ -180,7 +203,7 @@
 
     .hero__wrapper {
         min-height: 675px;
-        padding: 0;
+        padding: 15px 0 15px 0;
     }
 
     .hero__subwrapper {
@@ -212,7 +235,98 @@
         gap: 7px;
     }
 
-    .microshift__bottom-wrapper {
+    .bottom-wrapper {
         gap: 30px;
+    }
+
+    .dispersion__wrapper {
+        min-height: 675px;
+        padding: 15px 0 15px 0;
+    }
+
+    .dispersion__grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .dispersion__first-text {
+        grid-column: 1 / 5;
+        max-width: 290px;
+    }
+
+    .dispersion__second-text {
+        grid-column: 2 / 5;
+        max-width: 215px;
+    }
+
+    .dispersion__shard:first-child {
+        width: 50px;
+        top: 270px;
+        left: 105px;
+    }
+
+    .dispersion__shard:nth-child(2) {
+        width: 20px;
+        top: 190px;
+        right: 5px;
+    }
+
+    .dispersion__shard:nth-child(3) {
+        width: 45px;
+        top: unset;
+        bottom: 240px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .dispersion__shard:nth-child(4) {
+        width: 12px;
+        bottom: 315px;
+        right: 70px;
+    }
+
+    .dispersion__shard:nth-child(5) {
+        width: 64px;
+        bottom: 170px;
+        right: -10px;
+    }
+
+    .dispersion__shard:nth-child(6) {
+        width: 52px;
+        top: 280px;
+        left: 9px;
+    }
+
+    .dispersion__shard:nth-child(7) {
+        width: 30px;
+        top: 270px;
+        right: 55px;
+    }
+
+    .dispersion__shard:nth-child(8) {
+        width: 80px;
+        bottom: 230px;
+        left: 0;
+    }
+
+    .cryst__text {
+        grid-column: 1 / -1;
+    }
+
+    .cryst__label-wrapper {
+        margin-top: 10px;
+    }
+
+    .footer__crystal {
+        width: 300px;
+    }
+
+    .footer__label-wrapper {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .footer__title {
+        text-align: left;
     }
 }
