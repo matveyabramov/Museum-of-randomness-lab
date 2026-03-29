@@ -31,7 +31,7 @@
                     <div class="label label-desktop">[ SYSTEM: IDLE ]</div>
                 </div>
                 <div class="hero__bottom-wrapper bottom-wrapper">
-                    <a href="#" class="hero__link">[ Запустить эксперимент ]</a>
+                    <a href="#drift" class="hero__link" id="start-experiment">[ Запустить эксперимент ]</a>
                     <div class="hero__label-mobile-wrapper">
                         <div class="label label-mobile">[ Session: NEW ]</div>
                         <div class="label label-mobile">[ SYSTEM: IDLE ]</div>
@@ -40,7 +40,7 @@
             </div>
         </div>
     </section>
-    <section class="microshift">
+    <section class="microshift" id="drift">
         <div class="container">
             <div class="microshift__wrapper">
                 <div class="microshift__subwrapper">
@@ -68,12 +68,14 @@
                 </div>
                 <div class="bottom-wrapper">
                     <div class="microshift__timeline">
-                        <div class="microshift__timeline-line"></div>
+                        <div class="microshift__timeline-line" id="microshift-timeline"></div>
                         <button class="microshift__timeline-point active" data-index="0"></button>
                         <button class="microshift__timeline-point" data-index="1"></button>
                         <button class="microshift__timeline-point" data-index="2"></button>
                         <button class="microshift__timeline-point" data-index="3"></button>
                         <button class="microshift__timeline-point" data-index="4"></button>
+
+                        <button class="microshift__timeline-thumb" id="microshift-thumb"></button>
                     </div>
                     <div class="label-wrapper">
                         <div class="label">[ STABILITY: 78% ]</div>
@@ -101,15 +103,15 @@
                             как рассеянный след.</p>
                     </div>
                 </div>
-                <div class="dispersion__shard-wrapper">
-                    <img src="./images/shards/Shard1.png" alt="shard" class="dispersion__shard">
-                    <img src="./images/shards/Shard2.png" alt="shard" class="dispersion__shard">
-                    <img src="./images/shards/Shard3.png" alt="shard" class="dispersion__shard">
-                    <img src="./images/shards/Shard4.png" alt="shard" class="dispersion__shard">
-                    <img src="./images/shards/Shard5.png" alt="shard" class="dispersion__shard">
-                    <img src="./images/shards/Shard6.png" alt="shard" class="dispersion__shard">
-                    <img src="./images/shards/Shard7.png" alt="shard" class="dispersion__shard">
-                    <img src="./images/shards/Shard8.png" alt="shard" class="dispersion__shard">
+                <div class="dispersion__shard-wrapper" id="dispersion-field">
+                    <img src="./images/shards/Shard1.png" alt="shard" class="dispersion__shard" draggable="false" aria-hidden="true">
+                    <img src="./images/shards/Shard2.png" alt="shard" class="dispersion__shard" draggable="false" aria-hidden="true">
+                    <img src="./images/shards/Shard3.png" alt="shard" class="dispersion__shard" draggable="false" aria-hidden="true">
+                    <img src="./images/shards/Shard4.png" alt="shard" class="dispersion__shard" draggable="false" aria-hidden="true">
+                    <img src="./images/shards/Shard5.png" alt="shard" class="dispersion__shard" draggable="false" aria-hidden="true">
+                    <img src="./images/shards/Shard6.png" alt="shard" class="dispersion__shard" draggable="false" aria-hidden="true">
+                    <img src="./images/shards/Shard7.png" alt="shard" class="dispersion__shard" draggable="false" aria-hidden="true">
+                    <img src="./images/shards/Shard8.png" alt="shard" class="dispersion__shard" draggable="false" aria-hidden="true">
                 </div>
                 <div class="bottom-wrapper">
                     <h2 class="dispersion__title title">Форма утрачена как оболочка.<br>Остались только следы структуры и шум.</h2>
@@ -157,11 +159,11 @@
                     <div class="label">[ Experiment author — Matvey Abramov ]</div>
                     <div class="label">[ Museum of Randomness / 2026 ]</div>
                 </div>
-                <div class="footer__coords">
+                <div class="footer__coords" id="footer-field">
                     <div class="footer__axis-x"></div>
                     <div class="footer__axis-y"></div>
                     <div class="footer__crystal-wrapper">
-                        <img src="./images/Footer-Crystal.png" alt="crystal" class="footer__crystal">
+                        <img src="./images/Footer-Crystal.png" alt="crystal" class="footer__crystal" id="footer-crystal">
                     </div>
                 </div>
                 <div class="footer__bottom-wrapper bottom-wrapper">

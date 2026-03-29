@@ -3,13 +3,16 @@
         margin-top: 100px;
     }
 
-    section.dispersion,
-    section.microshift,
     section.cryst,
     footer {
         margin-top: 80px;
     }
-    
+
+    section.microshift,
+    section.dispersion {
+        margin-top: 60px;
+    }
+
     .title {
         font-size: 40px;
     }
@@ -44,10 +47,14 @@
 
     .microshift__slider {
         position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .microshift__slider-img {
         width: 100%;
+        max-width: 500px;
     }
 
     .dispersion__wrapper {
@@ -73,50 +80,43 @@
     }
 
     .dispersion__shard:first-child {
-        top: 400px;
-        left: 280px;
+        top: 33%;
+        left: 37%;
     }
 
     .dispersion__shard:nth-child(2) {
-        top: 260px;
-        right: 60px;
-        left: unset;
+        top: 58%;
+        left: 8%;
     }
 
     .dispersion__shard:nth-child(3) {
-        top: 60px;
-        right: 150px;
-        left: unset;
+        top: 6%;
+        left: 61%;
     }
 
     .dispersion__shard:nth-child(4) {
-        top: unset;
-        bottom: 550px;
-        right: 200px;
+        top: 52%;
+        left: 84%;
     }
 
     .dispersion__shard:nth-child(5) {
-        top: unset;
-        bottom: 320px;
-        right: 130px;
+        top: 55%;
+        left: 46%;
     }
 
     .dispersion__shard:nth-child(6) {
-        bottom: unset;
-        top: 370px;
-        left: 60px;
+        top: 31%;
+        left: 6%;
     }
 
     .dispersion__shard:nth-child(7) {
-        bottom: unset;
-        top: 410px;
-        right: 240px;
-        left: unset;
+        top: 35%;
+        left: 59%;
     }
 
     .dispersion__shard:nth-child(8) {
-        bottom: 320px;
-        left: 100px;
+        top: 45%;
+        left: 18%;
     }
 
     .cryst__subwrapper {
@@ -264,53 +264,51 @@
     }
 
     .dispersion__shard:first-child {
-        width: 50px;
-        top: 270px;
-        left: 105px;
+        width: 63px;
+        top: 43%;
+        left: 30%;
     }
 
     .dispersion__shard:nth-child(2) {
-        width: 20px;
-        top: 190px;
-        right: 5px;
+        width: 73px;
+        top: 37%;
+        left: 74%;
     }
 
     .dispersion__shard:nth-child(3) {
-        width: 45px;
-        top: unset;
-        bottom: 240px;
-        right: 50%;
-        transform: translateX(50%);
+        width: 40px;
+        top: 42%;
+        left: 8%;
     }
 
     .dispersion__shard:nth-child(4) {
-        width: 12px;
-        bottom: 315px;
-        right: 70px;
+        width: 35px;
+        top: 49%;
+        left: 76%;
     }
 
     .dispersion__shard:nth-child(5) {
-        width: 64px;
-        bottom: 170px;
-        right: -10px;
+        width: 92px;
+        top: 55%;
+        left: 44%;
     }
 
     .dispersion__shard:nth-child(6) {
-        width: 52px;
-        top: 280px;
-        left: 9px;
+        width: 47px;
+        top: 29%;
+        left: 2%;
     }
 
     .dispersion__shard:nth-child(7) {
-        width: 30px;
-        top: 270px;
-        right: 55px;
+        width: 41px;
+        top: 37%;
+        left: 54%;
     }
 
     .dispersion__shard:nth-child(8) {
-        width: 80px;
-        bottom: 230px;
-        left: 0;
+        width: 53px;
+        top: 56%;
+        left: 2%;
     }
 
     .cryst__text {

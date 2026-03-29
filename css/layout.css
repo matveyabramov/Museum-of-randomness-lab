@@ -6,18 +6,30 @@ body {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: normal;
-    color: #D8D8D8;
+    color: #FFFFFF;
     background-color: #191919;
 }
 
+body.is-scroll-locked {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    left: 0;
+    right: 0;
+    overscroll-behavior: none;
+}
+
 section {
+    margin-top: 150px;
+}
+
+section.cryst,
+footer {
     margin-top: 130px;
 }
 
-section.dispersion,
 section.microshift,
-section.cryst,
-footer {
+section.dispersion {
     margin-top: 110px;
 }
 
@@ -78,7 +90,7 @@ section:first-child {
 }
 
 .hero__link {
-    color: #D8D8D8;
+    color: #FFFFFF;
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
@@ -96,6 +108,38 @@ section:first-child {
     height: 100%;
     background: transparent;
     --progress-bar-color: transparent;
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.hero__model-viewer.is-activated {
+    animation: crystalInit 3s ease-in-out;
+}
+
+@keyframes crystalInit {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    20% {
+        transform: scale(1.02);
+        filter: brightness(1.08) drop-shadow(0 0 8px rgba(255, 255, 255, 0.18));
+    }
+
+    45% {
+        transform: scale(1.035);
+        filter: brightness(1.16) drop-shadow(0 0 14px rgba(255, 255, 255, 0.28));
+    }
+
+    70% {
+        transform: scale(1.02);
+        filter: brightness(1.1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.22));
+    }
+
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
 }
 
 .hero__crystal-fallback {
@@ -107,6 +151,7 @@ section:first-child {
 }
 
 .microshift__wrapper {
+    padding: 20px 0 20px 0;
     position: relative;
     height: 100vh;
     min-height: 720px;
@@ -198,23 +243,39 @@ section:first-child {
     top: 50%;
     transform: translateY(-50%);
     left: 0;
-    background-color: #D8D8D8;
+    background-color: #FFFFFF;
     z-index: -1;
 }
 
 .microshift__timeline-point {
     width: 30px;
     height: 30px;
-    border: solid 3px #D8D8D8;
+    border: solid 3px #FFFFFF;
     background-color: #191919;
-    border-radius: 100000px;
+    border-radius: 100%;
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .microshift__timeline-point.active,
 .microshift__timeline-point:hover {
-    background-color: #D8D8D8;
+    background-color: #FFFFFF;
+}
+
+.microshift__timeline-thumb {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    border: none;
+    background: #FFFFFF;
+    z-index: 3;
+    cursor: grab;
+    padding: 0;
+    appearance: none;
 }
 
 .bottom-wrapper {
@@ -236,6 +297,7 @@ section:first-child {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    touch-action: pan-y;
 }
 
 .dispersion__top-wrapper {
@@ -270,51 +332,51 @@ section:first-child {
 }
 
 .dispersion__shard:first-child {
-    width: 90px;
-    top: 150px;
-    left: 120px;
+    width: 132px;
+    top: 14%;
+    left: 6%;
 }
 
 .dispersion__shard:nth-child(2) {
-    width: 35px;
-    top: 180px;
-    left: 400px;
+    width: 154px;
+    top: 15%;
+    left: 24%;
 }
 
 .dispersion__shard:nth-child(3) {
-    width: 78px;
-    top: 120px;
-    left: 540px;
+    width: 85px;
+    top: 12%;
+    left: 43%;
 }
 
 .dispersion__shard:nth-child(4) {
-    width: 22px;
-    top: 90px;
-    right: 320px;
+    width: 75px;
+    top: 51%;
+    left: 71%;
 }
 
 .dispersion__shard:nth-child(5) {
-    width: 114px;
-    top: 150px;
-    right: 70px;
+    width: 193px;
+    top: 8%;
+    left: 84%;
 }
 
 .dispersion__shard:nth-child(6) {
-    width: 96px;
-    bottom: 275px;
-    left: 150px;
+    width: 98px;
+    top: 49%;
+    left: 20%;
 }
 
 .dispersion__shard:nth-child(7) {
-    width: 57px;
-    bottom: 270px;
-    left: 470px;
+    width: 87px;
+    top: 49%;
+    left: 12%;
 }
 
 .dispersion__shard:nth-child(8) {
-    width: 145px;
-    bottom: 190px;
-    left: 700px;
+    width: 111px;
+    top: 52%;
+    left: 54%;
 }
 
 .cryst__wrapper {
@@ -367,15 +429,13 @@ section:first-child {
     gap: 20px;
 }
 
-/* потом интерактив можно будет в футере тоже сделать если будет время, тогда кристалл будет с абсолютным позиционированием */
-
 .footer__coords {
     width: 100%;
     height: 100%;
     position: relative;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .footer__axis-x {
@@ -385,7 +445,7 @@ section:first-child {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #D8D8D8;
+    background-color: #FFFFFF;
     z-index: -1;
 }
 
@@ -396,7 +456,7 @@ section:first-child {
     left: 50%;
     top: 0%;
     transform: translateX(-50%);
-    background-color: #D8D8D8;
+    background-color: #FFFFFF;
     z-index: -1;
 }
 
@@ -406,4 +466,17 @@ section:first-child {
 
 .footer__title {
     text-align: center;
+}
+
+.footer__crystal-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer__crystal {
+    width: 100%;
+    max-width: 590px;
+    will-change: transform;
 }
